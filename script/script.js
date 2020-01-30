@@ -5,10 +5,10 @@ let isNumber = function(n) {
 };
 
 let attempts = 10;
+let number = Math.floor(Math.random() * 100);
 
 let game = function () {
   let answer = prompt('Угадай число от 1 до 100');
-  let number = 45;
   // let number = Math.floor(Math.random() * 100);
   // console.log(number);
   if (answer == null) {
@@ -22,6 +22,7 @@ let game = function () {
       let lose = confirm('Попытки закончились, хотите сыграть еще?');
       if (lose == true) {
         attempts = 10;
+        number = Math.floor(Math.random() * 100)
         game();
       }
       else {
@@ -37,6 +38,7 @@ let game = function () {
       let lose = confirm('Попытки закончились, хотите сыграть еще?');
       if (lose == true) {
         attempts = 10;
+        number = Math.floor(Math.random() * 100)
         game();
       }
       else {
@@ -50,6 +52,7 @@ let game = function () {
     let win = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?');
     if (win === true) {
       attempts = 10;
+      number = Math.floor(Math.random() * 100)
       game();
     }
     else {
